@@ -12,7 +12,6 @@
             --dorado: #d4af37;
             --blanco: #ffffff;
             --gris: #a0a0a0;
-            --tiktok: #fe2c55;
         }
 
         body {
@@ -76,53 +75,6 @@
             line-height: 2;
         }
 
-        /* SECCIÓN MULTIMEDIA SIMÉTRICA */
-        .contenedor-media {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .bloque-video {
-            background: var(--tarjeta);
-            border: 1px solid #1a1a1a;
-            padding: 20px;
-            border-radius: 4px;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Alinea el contenido y el botón */
-            min-height: 550px; /* Asegura que ambos tengan la misma altura mínima */
-        }
-
-        .bloque-video:hover {
-            border-color: var(--dorado);
-        }
-
-        .media-wrapper {
-            width: 100%;
-            height: 380px; /* Altura fija interna para ambos */
-            background: #000;
-            border-radius: 4px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .titulo-media {
-            font-size: 0.8rem;
-            color: var(--dorado);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-            display: block;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        /* SECCIÓN SERVICIOS */
         .titulo-seccion {
             text-align: center;
             text-transform: uppercase;
@@ -271,8 +223,6 @@
             header { padding-top: 10px; }
             .logo-dj { position: static; display: block; margin: 0 auto 20px; width: 120px; }
             .nombre-marca { font-size: 1.8rem; letter-spacing: 6px; padding-top: 0; }
-            .contenedor-media { grid-template-columns: 1fr; }
-            .bloque-video { min-height: auto; }
             .contenido-protocolo { grid-template-columns: 1fr; }
             .rejilla-paquetes { grid-template-columns: 1fr; }
         }
@@ -284,19 +234,32 @@
     <header>
         <img src="logo.josealmeyda.png" alt="Logo DJ Jose Almeyda" class="logo-dj">
         <h1 class="nombre-marca">DJ JOSE ALMEYDA</h1>
-        <span class="eslogan-principal">MI PRIORIDAD SERÁ TU DIVERSIÓN Y TU DIVERSIÓN SERÁ MEMORABLE</span>
+        <span class="eslogan-principal">MI PRIORIDAD SERÁ TU DIVERSIÓN Y LA TUYA SOLO DISFRUTAR</span>
     </header>
 
     <div class="presentacion">
-        Transformo eventos en experiencias únicas, combinando la energía de los ritmos actuales con la elegancia de un servicio de primer nivel. Me enfoco en convertir cada ocasión en un espectáculo sin precedentes, priorizando el orden técnico y la excelencia acústica. Mi objetivo es que tu única responsabilidad sea disfrutar; del resto me encargo yo, garantizando una noche única einigualable.
+        Transformo eventos en experiencias únicas, combinando la energía de los ritmos actuales con la elegancia de un servicio de primer nivel. Me enfoco en convertir cada ocasión en un espectáculo sin precedentes, priorizando el orden técnico y la excelencia acústica. Mi objetivo es que tu única responsabilidad sea disfrutar; del resto me encargo yo, garantizando una noche única e inigualable.
     </div>
 
     <h2 class="titulo-seccion">Propuesta de Servicios</h2>
 
     <div class="rejilla-paquetes">
+
         <div class="tarjeta-paquete">
             <div class="cabecera-paquete">
                 <span class="nombre-paquete">Básico 1</span>
+                <span class="precio-paquete">S/ 200</span>
+            </div>
+            <ul class="lista-detalles">
+                <li>Dj en Vivo</li>
+                <li>Música Variada por 5 horas.</li>
+            </ul>
+            <a href="https://wa.me/51917181916?text=Hola%20DJ%20JOSE%20ALMEYDA%2C%20deseo%20el%20siguiente%20servicio%3A%0A%0A*%F0%9F%8E%A7%20Paquete%3A*%20B%C3%A1sico%201%0A*%F0%9F%92%B5%20Precio%3A*%20S%2F%20200%0A*%F0%9F%93%8B%20Incluye%3A*%0A-%20Dj%20en%20Vivo%0A-%20M%C3%BAsica%20Variada%20por%205%20horas" target="_blank" class="boton-reserva">Reservar Fecha</a> 
+        </div>
+
+        <div class="tarjeta-paquete">
+            <div class="cabecera-paquete">
+                <span class="nombre-paquete">Básico 2</span>
                 <span class="precio-paquete">S/ 250</span>
             </div>
             <ul class="lista-detalles">
@@ -304,11 +267,12 @@
                 <li>1 Tacho LED rítmico.</li>
                 <li>Música Variada por 5 horas.</li>
             </ul>
-<a href="https://wa.me/51917181916?text=Hola%20DJ%20Jose%20Almeyda,%20deseo%20reservar%20el%20*Básico%201*%0A%0A*Precio:*%20S/%20250%0A*Incluye:*%0A-%201%20Equipo%20profesional%0A-%201%20Tacho%20LED%20rítmico%0A-%20Música%20Variada%20(5%20horas)" target="_blank" class="boton-reserva">Reservar Fecha</a>        </div>
+            <a href="https://wa.me/51917181916?text=Hola%20DJ%20JOSE%20ALMEYDA%2C%20deseo%20el%20siguiente%20servicio%3A%0A%0A*%F0%9F%8E%A7%20Paquete%3A*%20B%C3%A1sico%202%0A*%F0%9F%92%B5%20Precio%3A*%20S%2F%20250%0A*%F0%9F%93%8B%20Incluye%3A*%0A-%201%20Equipo%20profesional%0A-%201%20Tacho%20LED%20r%C3%ADtmico%0A-%20M%C3%BAsica%20Variada%20por%205%20horas" target="_blank" class="boton-reserva">Reservar Fecha</a> 
+        </div>
 
         <div class="tarjeta-paquete">
             <div class="cabecera-paquete">
-                <span class="nombre-paquete">Básico 2</span>
+                <span class="nombre-paquete">Básico 3</span>
                 <span class="precio-paquete">S/ 300</span>
             </div>
             <ul class="lista-detalles">
@@ -318,11 +282,12 @@
                 <li>1 Máquina de Humo.</li>
                 <li>Música Variada por 5 horas.</li>
             </ul>
-<a href="https://wa.me/51917181916?text=Hola%20DJ%20Jose%20Almeyda,%20deseo%20reservar%20el%20*Básico%202*%0A%0A*Precio:*%20S/%20300%0A*Incluye:*%0A-%201%20Equipo%20profesional%0A-%20Estructura%20de%20iluminación%0A-%202%20Tachos%20LED%20rítmicos%0A-%201%20Máquina%20de%20Humo%0A-%20Música%20Variada%20(5%20horas)" target="_blank" class="boton-reserva">Reservar Fecha</a>        </div>
+            <a href="https://wa.me/51917181916?text=Hola%20DJ%20JOSE%20ALMEYDA%2C%20deseo%20el%20siguiente%20servicio%3A%0A%0A*%F0%9F%8E%A7%20Paquete%3A*%20B%C3%A1sico%203%0A*%F0%9F%92%B5%20Precio%3A*%20S%2F%20300%0A*%F0%9F%93%8B%20Incluye%3A*%0A-%201%20Equipo%20profesional%0A-%20Estructura%20de%20iluminaci%C3%B3n%0A-%202%20Tachos%20LED%20r%C3%ADtmicos%0A-%201%20M%C3%A1quina%20de%20Humo%0A-%20M%C3%BAsica%20Variada%20por%205%20horas" target="_blank" class="boton-reserva">Reservar Fecha</a>
+        </div>
 
         <div class="tarjeta-paquete">
             <div class="cabecera-paquete">
-                <span class="nombre-paquete">Básico 3</span>
+                <span class="nombre-paquete">Básico 4</span>
                 <span class="precio-paquete">S/ 300</span>
             </div>
             <ul class="lista-detalles">
@@ -332,10 +297,25 @@
                 <li>1 Máquina de Humo.</li>
                 <li>Música Variada por 5 horas.</li>
             </ul>
-<a href="https://wa.me/51917181916?text=Hola%20DJ%20Jose%20Almeyda,%20deseo%20reservar%20el%20*Básico%203*%0A%0A*Precio:*%20S/%20300%0A*Incluye:*%0A-%201%20Equipo%20profesional%0A-%20Estructura%20iluminación%20avanzada%0A-%201%20Luz%20Efecto%20Helicóptero%0A-%201%20Máquina%20de%20Humo%0A-%20Música%20Variada%20(5%20horas)" target="_blank" class="boton-reserva">Reservar Fecha</a>        </div>
-    </div>
+            <a href="https://wa.me/51917181916?text=Hola%20DJ%20JOSE%20ALMEYDA%2C%20deseo%20el%20siguiente%20servicio%3A%0A%0A*%F0%9F%8E%A7%20Paquete%3A*%20B%C3%A1sico%204%0A*%F0%9F%92%B5%20Precio%3A*%20S%2F%20300%0A*%F0%9F%93%8B%20Incluye%3A*%0A-%201%20Equipo%20profesional%0A-%20Estructura%20de%20iluminaci%C3%B3n%20avanzada%0A-%201%20Luz%20Efecto%20Helic%C3%B3ptero%0A-%201%20M%C3%A1quina%20de%20Humo%0A-%20M%C3%BAsica%20Variada%20por%205%20horas" target="_blank" class="boton-reserva">Reservar Fecha</a>
+        </div>
+    
+        <div class="tarjeta-paquete">
+            <div class="cabecera-paquete">
+                <span class="nombre-paquete">Básico 5</span>
+                <span class="precio-paquete">S/ 350</span>
+            </div>
+            <ul class="lista-detalles">
+                <li>1 Equipo profesional de alta calidad.</li>
+                <li>Estructura de iluminación avanzada.</li>
+                <li>1 Tacho LED rítmico.</li>
+                <li>2 Cabezas Moviles.</li>
+                <li>1 Máquina de Humo.</li>
+                <li>Música Variada por 5 horas.</li>
+            </ul>
+            <a href="https://wa.me/51917181916?text=Hola%20DJ%20JOSE%20ALMEYDA%2C%20deseo%20el%20siguiente%20servicio%3A%0A%0A*%F0%9F%8E%A7%20Paquete%3A*%20B%C3%A1sico%205%0A*%F0%9F%92%B5%20Precio%3A*%20S%2F%20350%0A*%F0%9F%93%8B%20Incluye%3A*%0A-%201%20Equipo%20profesional%0A-%20Estructura%20iluminaci%C3%B3n%20avanzada%0A-%201%20Tacho%20LED%20r%C3%ADtmico%0A-%202%20Cabezas%20M%C3%B3viles%0A-%201%20M%C3%A1quina%20de%20Humo%0A-%20M%C3%BAsica%20Variada%20por%205%20horas" target="_blank" class="boton-reserva">Reservar Fecha</a>
+        </div>
 
-    <div class="rejilla-paquetes espacio-bloque">
         <div class="tarjeta-paquete">
             <div class="cabecera-paquete">
                 <span class="nombre-paquete">Intermedio 1</span>
@@ -346,11 +326,31 @@
                 <li>2 Tachos LEDS rítmicos.</li>
                 <li>Música Variada por 5 horas.</li>
             </ul>
-<a href="https://wa.me/51917181916?text=Hola%20DJ%20Jose%20Almeyda,%20deseo%20reservar%20el%20*Intermedio%201*%0A%0A*Precio:*%20S/%20350%0A*Incluye:*%0A-%202%20Equipos%20profesionales%0A-%202%20Tachos%20LED%20rítmicos%0A-%20Música%20Variada%20(5%20horas)" target="_blank" class="boton-reserva">Reservar Fecha</a>        </div>
+            <a href="https://wa.me/51917181916?text=Hola%20DJ%20JOSE%20ALMEYDA%2C%20deseo%20el%20siguiente%20servicio%3A%0A%0A*%F0%9F%8E%A7%20Paquete%3A*%20Intermedio%201%0A*%F0%9F%92%B5%20Precio%3A*%20S%2F%20350%0A*%F0%9F%93%8B%20Incluye%3A*%0A-%202%20Equipos%20profesionales%0A-%202%20Tachos%20LED%20r%C3%ADtmicos%0A-%20M%C3%BAsica%20Variada%20por%205%20horas" target="_blank" class="boton-reserva">Reservar Fecha</a>
+        </div>
 
+    </div>
+
+    <div class="rejilla-paquetes espacio-bloque">
+        
         <div class="tarjeta-paquete">
             <div class="cabecera-paquete">
                 <span class="nombre-paquete">Intermedio 2</span>
+                <span class="precio-paquete">S/ 400</span>
+            </div>
+            <ul class="lista-detalles">
+                <li>2 Equipos profesionales de alta calidad.</li>
+                <li>Estructura de iluminación.</li>
+                <li>2 Tachos LEDS rítmicos.</li>
+                <li>Máquina de Humo.</li>
+                <li>Música Variada por 5 horas.</li>
+            </ul>
+            <a href="https://wa.me/51917181916?text=Hola%20DJ%20JOSE%20ALMEYDA%2C%20deseo%20el%20siguiente%20servicio%3A%0A%0A*%F0%9F%8E%A7%20Paquete%3A*%20Intermedio%202%0A*%F0%9F%92%B5%20Precio%3A*%20S%2F%20400%0A*%F0%9F%93%8B%20Incluye%3A*%0A-%202%20Equipos%20profesionales%0A-%20Estructura%20de%20iluminaci%C3%B3n%0A-%202%20Tachos%20LED%20r%C3%ADtmicos%0A-%20M%C3%A1quina%20de%20Humo%0A-%20M%C3%BAsica%20Variada%20por%205%20horas" target="_blank" class="boton-reserva">Reservar Fecha</a>
+        </div>
+        
+        <div class="tarjeta-paquete">
+            <div class="cabecera-paquete">
+                <span class="nombre-paquete">Intermedio 3</span>
                 <span class="precio-paquete">S/ 450</span>
             </div>
             <ul class="lista-detalles">
@@ -358,10 +358,11 @@
                 <li>Estructura de iluminación.</li>
                 <li>2 Tachos LEDS rítmicos.</li>
                 <li>2 Cabezas Moviles profesionales.</li>
-                <li>1 Máquina de Humo.</li>
+                <li>Máquina de Humo.</li>
                 <li>Música Variada por 5 horas.</li>
             </ul>
-<a href="https://wa.me/51917181916?text=Hola%20DJ%20Jose%20Almeyda,%20deseo%20reservar%20el%20*Intermedio%202*%0A%0A*Precio:*%20S/%20450%0A*Incluye:*%0A-%202%20Equipos%20profesionales%0A-%20Estructura%20de%20iluminación%0A-%202%20Tachos%20LED%20rítmicos%0A-%202%20Cabezas%20Móviles%0A-%201%20Máquina%20de%20Humo%0A-%20Música%20Variada%20(5%20horas)" target="_blank" class="boton-reserva">Reservar Fecha</a>        </div>
+            <a href="https://wa.me/51917181916?text=Hola%20DJ%20JOSE%20ALMEYDA%2C%20deseo%20el%20siguiente%20servicio%3A%0A%0A*%F0%9F%8E%A7%20Paquete%3A*%20Intermedio%203%0A*%F0%9F%92%B5%20Precio%3A*%20S%2F%20450%0A*%F0%9F%93%8B%20Incluye%3A*%0A-%202%20Equipos%20profesionales%0A-%20Estructura%20de%20iluminaci%C3%B3n%0A-%202%20Tachos%20LED%20r%C3%ADtmicos%0A-%202%20Cabezas%20M%C3%B3viles%0A-%20M%C3%A1quina%20de%20Humo%0A-%20M%C3%BAsica%20Variada%20por%205%20horas" target="_blank" class="boton-reserva">Reservar Fecha</a>
+        </div>
 
         <div class="tarjeta-paquete">
             <div class="cabecera-paquete">
@@ -370,10 +371,9 @@
             <ul class="lista-detalles">
                 <li>Asesoría directa para diseñar un paquete a la medida de tu evento y necesidades específicas.</li>
             </ul>
-            <a href="https://wa.me/51917181916?text=Hola%20DJ%20Jose%20Almeyda,%20solicito%20una%20*Asesoría%20Personalizada*" target="_blank" class="boton-reserva">Contactar</a>
+            <a href="https://wa.me/51917181916?text=Hola%20DJ%20JOSE%20ALMEYDA%2C%20necesito%20una%20*Asesor%C3%ADa%20Personalizada*%20para%20dise%C3%B1ar%20un%20paquete%20a%20la%20medida%20de%20mi%20evento." target="_blank" class="boton-reserva">Contactar</a>
         </div>
     </div>
-
 
     <div class="seccion-protocolo">
         <span class="titulo-protocolo">Protocolo y Condiciones Generales</span>
@@ -383,13 +383,11 @@
                 <p><strong>Movilidad:</strong> Los costos de la movilidad se calculan de forma independiente según la ubicación de la locación.</p>
                 <p><strong>Infraestructura:</strong> El cliente proporcionará una superficie estable para el despliegue técnico.</p>
                 <p><strong>Instalación:</strong> El cliente deberá facilitar una mesa firme y un espacio adecuado para la instalación de los equipos.</p>
-                
             </div>
             <div class="item-protocolo">
-                <p><strong>Seguridad Técnica:</strong> Conexión eléctrica independiente y protección obligatoria contra el clima (toldo o techo) para garantizar el correcto funcionamiento de los equipos en exteriores.</p>
-                <p><strong>Horas extras:</strong> La extensión del servicio está sujeta a disponibilidad y tienen un cargo adicional por hora. Y esto se debe anticipar 30 minutos antes de que culmine el contrato original</p>
-                <p><strong>Responsabilidad del Cliente:</strong> La integridad de los equipos queda bajo resguardo del cliente ante cualquier incidente causado por invitados.</p>
-
+                <p><strong>Seguridad Técnica:</strong> Conexión eléctrica independiente y protección obligatoria contra el clima (toldo o techo).</p>
+                <p><strong>Horas extras:</strong> Sujetas a disponibilidad y tienen un cargo adicional por hora.</p>
+                <p><strong>Responsabilidad del Cliente:</strong> La integridad de los equipos queda bajo resguardo del cliente ante cualquier incidente.</p>
             </div>
         </div>
     </div>
