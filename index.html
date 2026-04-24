@@ -6,6 +6,86 @@
     <title>DJ JOSE ALMEYDA | Portafolio Profesional</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
     <style>
+        
+#loader-wrapper {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #000;
+    display: flex; justify-content: center; align-items: center;
+    z-index: 9999;
+}
+
+/* --- Estilos del Logo --- */
+.logo-fill-container {
+    position: relative;
+    width: 220px; /* Tamaño ideal para móvil y web */
+    margin: 0 auto 25px;
+}
+
+.logo-base {
+    width: 100%;
+    height: auto;
+    opacity: 0.15; /* Sombra del logo vacío */
+}
+
+.logo-fill-overlay {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 0%;
+    overflow: hidden;
+    animation: fillEffect 4.5s ease-in-out forwards;
+}
+
+.logo-top {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: auto;
+}
+
+/* --- Estilos de la Línea de Carga --- */
+.loading-bar-container {
+    width: 180px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto 15px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.loading-bar-progress {
+    width: 0%;
+    height: 100%;
+    background: #fff; /* Línea blanca limpia */
+    animation: barEffect 4.5s ease-in-out forwards;
+}
+
+/* --- Animaciones --- */
+@keyframes fillEffect {
+    0% { height: 0%; }
+    100% { height: 100%; }
+}
+
+@keyframes barEffect {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.loader-text {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 22px; /* Más grande y legible */
+    font-weight: bold; /* Letra más gruesa para que impacte */
+    letter-spacing: 8px; /* Espaciado elegante entre letras */
+    text-transform: uppercase;
+    display: block;
+    margin-top: 20px; /* Espacio extra debajo de la línea de carga */
+    opacity: 0.9;
+    
+    /* Opcional: una pequeña sombra para que se vea más premium */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}   
+
+
+
+
         :root {
             --fondo: #050505;
             --tarjeta: #0f0f0f;
@@ -310,7 +390,21 @@
 </head>
 <body>
 
-<div class="contenedor">
+    <div id="loader-wrapper">
+    <div class="loader-content">
+        <div class="logo-fill-container">
+            <img src="logo.josealmeyda.svg" class="logo-base" alt="DJ Jose Almeyda">
+            <div class="logo-fill-overlay">
+                <img src="logo.josealmeyda.svg" class="logo-top" alt="DJ Jose Almeyda">
+            </div>
+        </div>
+        <span class="loader-text">DJ JOSE ALMEYDA</span>
+    </div>
+</div>
+
+
+
+    <div class="contenedor">
     <header>
         <img src="logo.josealmeyda.png" alt="Logo DJ Jose Almeyda" class="logo-dj">
         <h1 class="nombre-marca">DJ JOSE ALMEYDA</h1>
@@ -522,6 +616,20 @@
         contenido.classList.toggle('abierto');
         if (contenido.classList.contains('abierto')) { span.innerText = '−'; } else { span.innerText = '+'; }
     }
+</script>
+
+<script>
+    window.addEventListener("load", function() {
+        const loader = document.getElementById("loader-wrapper");
+        // 4 segundos para que se aprecie el logo lleno y la barra al 100%
+        setTimeout(() => {
+            loader.style.opacity = "0";
+            loader.style.transition = "opacity 0.8s ease";
+            setTimeout(() => {
+                loader.style.visibility = "hidden";
+            }, 500);
+        }, 2500); 
+    });
 </script>
 
 </body>
