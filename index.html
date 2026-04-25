@@ -5,16 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ JOSE ALMEYDA | Portafolio Profesional</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
-    
     <style>
-        /* Bloquea el scroll mientras el loader esté presente */
-body {
-    overflow: hidden; /* Esto evitará que se muevan antes de que cargue */
-}
-
-/* Una vez que el loader desaparezca, el scroll debe volver a la normalidad */
-/* Puedes manejar esto añadiendo una clase al body desde JS o simplemente 
-   cambiando el CSS del body en el evento load */
         
 #loader-wrapper {
     position: fixed;
@@ -610,6 +601,7 @@ body {
         </div>
     </div>
     
+
     <footer>
         <p class="frase-cierre">"Que tu noche sea Mágica"</p>
     </footer>
@@ -639,42 +631,6 @@ body {
 </script>
 
 <script>
-        // 1. Evita que el navegador recuerde la posición del scroll
-        if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
-        }
-
-        // Función para el Acordeón (la que ya tenías)
-        function toggleProtocolo() {
-            const contenido = document.getElementById('protocoloContenido');
-            const span = document.querySelector('.acordeon-titulo span');
-            contenido.classList.toggle('abierto');
-            if (contenido.classList.contains('abierto')) { 
-                span.innerText = '−'; 
-            } else { 
-                span.innerText = '+'; 
-            }
-        }
-
-        // Lógica del Loader y Scroll al inicio
-        window.addEventListener("load", function() {
-            // 2. Fuerza el regreso al tope de la página al refrescar
-            window.scrollTo(0, 0);
-            
-            const loader = document.getElementById("loader-wrapper");
-            
-            setTimeout(() => {
-                loader.style.opacity = "0";
-                loader.style.transition = "opacity 0.8s ease";
-                
-                setTimeout(() => {
-                    loader.style.visibility = "hidden";
-                }, 500);
-            }, 2500); 
-        });
-    </script>
-    
-<script>
     // 1. Evita que el navegador restaure la posición del scroll automáticamente
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
@@ -694,7 +650,7 @@ body {
             }, 800);
         }, 2500); 
     });
-</script>    
-    
+</script>
+
 </body>
 </html>
