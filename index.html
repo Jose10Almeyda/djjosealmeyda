@@ -629,5 +629,27 @@
     });
 </script>
 
+<script>
+    // 1. Evita que el navegador restaure la posición del scroll automáticamente
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    window.addEventListener("load", function() {
+        // 2. Fuerza el scroll al inicio apenas cargue la página
+        window.scrollTo(0, 0);
+
+        const loader = document.getElementById("loader-wrapper");
+        
+        setTimeout(() => {
+            loader.style.opacity = "0";
+            loader.style.transition = "opacity 0.8s ease";
+            setTimeout(() => {
+                loader.style.visibility = "hidden";
+            }, 800);
+        }, 2500); 
+    });
+</script>    
+    
 </body>
 </html>
